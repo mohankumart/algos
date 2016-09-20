@@ -9,6 +9,7 @@ def isUnique():
             test_dict[c] = c
         else:
             is_unique = False
+            break
     if is_unique:
         return "String is unique"
     else:
