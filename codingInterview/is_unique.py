@@ -1,6 +1,9 @@
 #!/usr/bin/python
 str = raw_input("Enter string: ")
 
+# https://en.wikipedia.org/wiki/Plane_%28Unicode%29
+# http://www.ascii-code.com/
+
 def isUnique():
     test_dict = dict()
     is_unique = True
