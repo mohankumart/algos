@@ -20,4 +20,21 @@ def urlify(str):
                 spaceCount -= 3
     return "".join(resultlist)
 
-print(urlify(str))
+#print(urlify(str))
+
+def urlify2(str):
+    #import pdb;pdb.set_trace()
+    resultString = ''
+    first = False
+    for c in reversed(str):
+        if c != ' ':
+            first = True
+
+        if c == ' ' and first:
+            resultString += '%02'
+        elif first:
+            resultString += c
+
+    return resultString[::-1]
+
+print(urlify2(str))
