@@ -1,15 +1,29 @@
-bit_number = 0
+def filterNestedJson(test):
+    for detail in test:
+        for mylist in detail['y']:
+            for key in mylist.keys():
+                if mylist[key] == 'mohan':
+                    # del mylist[key]
+                    break
+            detail['y'].remove(mylist)
+    print test
 
-bit_number = bit_number | 1 << 2
-print(bit_number)
-print(bin(bit_number))
+test = [
+            {'y':[{'name':'mohan','hello':'testing'},{'name':'kumar'}]},
+            {'y':[{'name':'test'}, {'name':'count'}]}
+       ]
 
-bit_number = bit_number | 1 << 3
-print(bit_number)
-print(bin(bit_number))
 
-bit_number = bit_number | 1 << 4
-print(bit_number)
-print(bin(bit_number))
+filterNestedJson(test)
+
+
+
+
+
+
+
+
+
+
 
 
