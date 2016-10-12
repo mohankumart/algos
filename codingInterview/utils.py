@@ -14,9 +14,16 @@ test = [
        ]
 
 
-filterNestedJson(test)
+#filterNestedJson(test)
+import re
 
 
+def testregularexp():
+    str = 'mohan.kumar'
+    str = re.sub(r'\.|\s','+',str)
+    print(str)
+
+testregularexp()
 
 
 
