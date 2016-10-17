@@ -8,8 +8,6 @@ def rotateMatrix(my_array, matrix):
     left = 0
     right = 0
     while looplength >= 1:
-        print loopend
-        import pdb;pdb.set_trace()
         for mainloop in range(looplength):
             temp1 = my_array[loopstart][loopstart]
             temp2 = my_array[loopstart][loopstart]
