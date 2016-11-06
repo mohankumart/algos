@@ -47,6 +47,7 @@ def rotateMatrix(my_array, matrix):
 def createMatrix():
     matrix = int(raw_input('Enter The Matrix: '))
     my_array = [[0 for j in range(matrix)] for i in range(matrix)]
+    print my_array
     n = 1
     for i in range(matrix):
         for j in range(matrix):

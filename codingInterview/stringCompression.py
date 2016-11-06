@@ -1,5 +1,6 @@
 #string compression
 
+#using previous character
 def compressString(str1):
     count = 0
     tempString = ''
@@ -27,6 +28,7 @@ def compressString(str1):
 
     return tempString
 
-str1 = raw_input("Enter String: ")
+#str1 = raw_input("Enter String: ")
 
-print(compressString(str1))
+#print(compressString(str1))
+
