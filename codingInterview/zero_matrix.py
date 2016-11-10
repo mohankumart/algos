@@ -3,19 +3,29 @@ from sys import stdout
 
 
 def zero_matrix(my_array, matrix):
+    xMatrix = [1 for i in range(matrix)]
+    yMatrix = [1 for j in range(matrix)]
+    print xMatrix
+    print yMatrix
+
     for i in range(matrix):
         for j in range(matrix):
-            #import pdb;pdb.set_trace()
             if my_array[i][j] == 0:
-                #import pdb;pdb.set_trace()
-                #change the row to zero
-                    #keep the row contsant and change the column from 0 to n-1
-                for m in range(matrix):
-                    my_array[i][m] = 0
-                for n in range(matrix):
-                    my_array[n][j] = 0
-                #printMatrix(my_array, matrix) 
+                xMatrix[i] = 0
+                yMatrix[j] = 0
+
+    for m in range(len(xMatrix)):
+        if xMatrix[m] == 0:
+            for n in range(matrix):
+                my_array[m][n] = 0
+
+    for m in range(len(yMatrix)):
+        if yMatrix[m] == 0:
+            for n in range(matrix):
+                my_array[n][m] = 0
+ 
     printMatrix(my_array, matrix)
+
 
 def createMatrix():
     matrix = int(raw_input('Enter The Matrix: '))
