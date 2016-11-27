@@ -1,6 +1,8 @@
 #create Linked lists
 
 #Node creation class
+import sys
+
 class Node:
     def __init__(self, data=None, next_node=None):
         self.data = data
@@ -20,7 +22,10 @@ class LinkedList:
     def print_list(self):
         current = self.head
         while current:
-            print current.data
+            if current.next_node:
+                sys.stdout.write(str(current.data) + '---->')
+            else:
+                sys.stdout.write(str(current.data) + '\n')
             current = current.next_node
     def search(self, data):
         current = self.head
@@ -54,13 +59,8 @@ class LinkedList:
 
 
 my_list = LinkedList()
+for i in range(10):
+    my_list.insert_node(i)
+my_list.print_list()
 
-my_list.insert_node('Mohan')
-my_list.insert_node('kumar')
-my_list.insert_node('t')
-my_list.print_list()
-#print((my_list.search('kwewumar')).data)
-print(my_list.list_size())
-my_list.delete_node('Mohan')
-my_list.print_list()
 
