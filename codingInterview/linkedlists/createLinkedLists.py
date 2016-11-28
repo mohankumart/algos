@@ -89,6 +89,18 @@ class LinkedList:
                     previous_runner = runner
                     runner = runner.next_node
             current = current.next_node
+    def kthelementfromlast(self, k):
+        list_size = self.list_size()
+        #import pdb;pdb.set_trace()
+        kth = (list_size - int(k)) + 1
+        current = self.head
+        while kth != 0:
+            result = current.data
+            current = current.next_node
+            kth -= 1
+        print(result)
+            
+
 
 my_list = LinkedList()
 
@@ -98,6 +110,8 @@ for i in range(5):
 
 my_list.print_list()
 #my_list.remove_duplicates()
-my_list.remove_duplicates_nospace();
-my_list.print_list()
+#my_list.remove_duplicates_nospace();
+#my_list.print_list()
+input = raw_input("Enter kth: ")
+my_list.kthelementfromlast(input)
 
