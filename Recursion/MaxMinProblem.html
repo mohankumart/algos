@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			var a = [12,0,4,1,100,98,90,6,65,13,21,32,43,76,12,56,9],max,min;
+			
+			function MaxMin(i,j){
+				var mid,max1,min1;
+				if(i==j){
+					max = a[i];
+					min = a[i];
+				}else if(i == j-1){
+					if(a[i] < a[j]){
+						max = a[j];
+						min = a[i];
+					}else{
+						max = a[i];
+						min = a[j];
+					}
+				}else{
+					mid = Math.floor((i+j)/2);
+					MaxMin(i,mid);
+					max1 = max;
+					min1 = min;
+					MaxMin(mid+1,j);
+					
+					if(max < max1){
+						max = max1;
+					}
+					
+					if(min > min1){
+						min = min1
+					}
+					
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="Find MaxMin" onclick="MaxMin(0,16)"/>
+	</body>
+</html>
